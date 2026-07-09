@@ -1,0 +1,69 @@
+name: Deploy to GoDaddy (FTPS)
+
+# Ships the repo to its GoDaddy doc root on every push to main.
+# The FTP account is chrooted to this site's doc root, so server-dir is ./.
+#
+# SAFETY: dangerous-clean-slate stays false. On growthbastards.com (main domain,
+# doc root = /public_html) it must NEVER be enabled — cleaning would delete every
+# sibling site nested inside /public_html.
+#
+# GoDaddy's FTP endpoint occasionally drops the control socket from GitHub runners,
+# so the deploy runs with a longer timeout and an automatic single retry.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via FTPS
+        id: deploy
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: ./
+          local-dir: ./
+          dangerous-clean-slate: false
+          timeout: 60000
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.DS_Store
+            .gitignore
+            README.md
+            Documentation/**
+            documents/**
+            config.sample.php
+            netlify.toml
+
+      - name: Deploy via FTPS (retry on transient failure)
+        if: steps.deploy.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: ./
+          local-dir: ./
+          dangerous-clean-slate: false
+          timeout: 60000
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.DS_Store
+            .gitignore
+            README.md
+            Documentation/**
+            documents/**
+            config.sample.php
+            netlify.toml
