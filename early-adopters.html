@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,16..72,400;0,16..72,500;0,16..72,600;1,16..72,400;1,16..72,500&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%2316130F"/><circle cx="20" cy="16" r="8.5" fill="none" stroke="%23EEE7D8" stroke-width="2"/><polygon points="2,7 21,16 2,25" fill="%23C32A1E"/><rect x="6.5" y="5.5" width="5" height="5" fill="%23EEE7D8" transform="rotate(13 9 8)"/></svg>'>
+<style>
+  html,body{margin:0;padding:0;}
+  ::placeholder{color:#a89f8c;opacity:1;}
+  ::selection{background:#C32A1E;color:#EEE7D8;}
+  a{color:inherit;}
+</style>
+</helmet>
+
+<div style="--paper:#EEE7D8; --paper2:#DED5C0; --ink:#16130F; --amber:#855A0F; --amberbright:#EBA83A; --red:#C32A1E; --mut:#6B6252; --div:#CFC6B2; min-height:100vh; background:var(--paper2); font-family:'JetBrains Mono',monospace; color:var(--ink); -webkit-font-smoothing:antialiased;">
+
+  <!-- reading progress -->
+  <div style="position:fixed; top:0; left:0; right:0; height:3px; background:rgba(0,0,0,0.06); z-index:50;">
+    <div ref="{{ barRef }}" style="height:100%; width:0%; background:var(--red);"></div>
+  </div>
+
+  <div style="position:relative; max-width:1180px; margin:0 auto; background:var(--paper); box-shadow:0 0 80px rgba(0,0,0,0.16);">
+
+    <!-- perforations -->
+    <div style="position:absolute; top:0; bottom:0; left:0; width:30px; z-index:3; background-image:radial-gradient(circle at 15px 16px, rgba(0,0,0,0.42) 0 2.2px, rgba(0,0,0,0.10) 2.2px 3.4px, transparent 3.6px); background-size:30px 34px;"></div>
+    <div style="position:absolute; top:0; bottom:0; right:0; width:30px; z-index:3; background-image:radial-gradient(circle at 15px 16px, rgba(0,0,0,0.42) 0 2.2px, rgba(0,0,0,0.10) 2.2px 3.4px, transparent 3.6px); background-size:30px 34px;"></div>
+
+    <!-- ===================== MASTHEAD ===================== -->
+    <header style="position:relative; z-index:2; padding:18px clamp(58px,6vw,92px) 0;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; color:var(--amber); padding-bottom:14px;">
+        <span>ARCHIVE PRINTOUT · VT-ATMA &nbsp;//&nbsp; VICEANDVARIANCE.COM</span>
+        <span>DISPATCH N&deg;01 · DECLASSIFIED</span>
+      </div>
+      <div style="height:1px; background:var(--amber); opacity:0.45;"></div>
+      <nav style="display:flex; justify-content:space-between; align-items:center; padding:18px 0 18px;">
+        <a href="index.html" style="text-decoration:none; font-family:'Big Shoulders Display',sans-serif; font-weight:900; font-size:26px; line-height:0.82; letter-spacing:-0.015em; color:var(--ink); white-space:nowrap;">VICE &amp; VARIANCE</a>
+        <div style="display:flex; align-items:center; gap:24px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em;">
+          <a href="archive.html" style="text-decoration:none;">← ALL DISPATCHES</a>
+          <a href="index.html#subscribe" style="text-decoration:none; background:var(--red); color:var(--ink); padding:9px 16px; letter-spacing:0.16em;">SUBSCRIBE</a>
+        </div>
+      </nav>
+      <div style="height:2px; background:var(--ink);"></div>
+    </header>
+
+    <!-- ===================== ARTICLE HEADER ===================== -->
+    <div style="position:relative; z-index:2; max-width:760px; margin:0 auto; padding:clamp(44px,5vw,76px) clamp(40px,5vw,40px) 0;">
+      <div style="display:flex; align-items:center; gap:14px; font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.16em; margin-bottom:30px;">
+        <span style="border:1px solid var(--amber); color:var(--amber); padding:3px 9px;">MYTH</span>
+        <span style="color:var(--mut);">SCIENCE FILES</span>
+        <span style="color:var(--mut);">·</span>
+        <span style="color:var(--mut);">FILE N&deg;01</span>
+      </div>
+
+      <h1 style="margin:0; font-family:'Newsreader',serif; font-weight:500; font-size:clamp(38px,5.6vw,68px); line-height:1.02; letter-spacing:-0.015em; color:var(--ink); text-wrap:balance;">Your Early Adopters Are Not Your Mother</h1>
+
+      <p style="margin:28px 0 0; font-family:'Newsreader',serif; font-style:italic; font-weight:400; font-size:clamp(20px,2.2vw,26px); line-height:1.42; color:#3a342b; max-width:60ch;">Everyone in startup land worships “trust.” The peer-reviewed research says your earliest users are running on something far more combustible, and chasing the wrong thing can quietly kill you.</p>
+
+      <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-top:34px; padding-top:20px; border-top:1px solid var(--div); font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; color:var(--mut);">
+        <span style="color:var(--ink);">BY ATMA DEGEYNDT</span>
+        <span>·</span>
+        <span>11 MIN READ</span>
+        <span>·</span>
+        <span>Q3 2026</span>
+        <span style="margin-left:auto; color:var(--amber);">● 13 CITATIONS</span>
+      </div>
+    </div>
+
+    <!-- ===================== ARTICLE BODY ===================== -->
+    <article style="position:relative; z-index:2; max-width:760px; margin:0 auto; padding:clamp(40px,5vw,56px) clamp(40px,5vw,40px) 0; font-family:'Newsreader',serif; font-size:20px; line-height:1.62; color:#1c1812;">
+
+      <!-- Section 1 -->
+      <div style="display:flex; align-items:baseline; gap:14px; margin:8px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">01</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">The Trillion-Dollar Graveyard</h2>
+      </div>
+
+      <p style="margin:0 0 24px;"><span style="float:left; font-family:'Big Shoulders Display',sans-serif; font-weight:900; font-size:84px; line-height:0.7; padding:8px 14px 0 0; color:var(--red);">I</span>n April 2021, Clubhouse was worth four billion dollars. Andreessen Horowitz had led the round, Tiger Global and DST piled in, invite codes were going for four hundred bucks on eBay, and Oprah, Elon, and Zuckerberg were dropping into rooms like it was the only party in a locked-down world.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn1" id="ref1" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">1</a></sup> Then the world unlocked. Monthly downloads that had peaked near ten million cratered toward a few hundred thousand, and by the spring of 2023 the company laid off half its staff to “reset.”<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn2" id="ref2" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">2</a></sup> The valuation didn’t correct. It evaporated.</p>
+
+      <p style="margin:0 0 24px;">Now rewind to 2007 and a different scene. A broke MIT kid named Drew Houston can’t ship a finished product, so he records a three-minute screencast of a thing that barely works, stuffs it with in-jokes for the Hacker News crowd, and posts it with a signup form bolted to the bottom. Overnight the beta waitlist jumps from five thousand to seventy-five thousand.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn3" id="ref3" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">3</a></sup> No celebrities. No four-billion-dollar paper. Just a clunky demo aimed with surgical precision at the exact people who already felt the pain. That company was Dropbox.</p>
+
+      <p style="margin:0 0 24px; font-family:'Newsreader',serif; font-style:italic; font-size:21px; color:#2a251d;">So what did Houston understand about his first users that a war chest of venture money couldn’t buy Clubhouse?</p>
+
+      <p style="margin:0 0 24px;">The honest answer costs more than most founders want to pay, because it means the thing they were told to build first is the wrong thing. For two decades the startup economy has run as an enormous capital incinerator. Global venture investment hit $368.3 billion in 2024, with the United States alone absorbing roughly $209 billion of it.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn4" id="ref4" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">4</a></sup> And here is the part the industry buries quietly: of venture-backed companies that raise real money, about three out of four never return cash to their investors, and somewhere between a third and forty percent liquidate to zero.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn5" id="ref5" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">5</a></sup> That is not a rounding error. That is the base rate.</p>
+
+      <!-- evidence callout -->
+      <div style="margin:38px 0; border:1px solid var(--ink); background:#E9DFC8;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 18px; border-bottom:1px solid var(--ink); font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; color:var(--ink);"><span>THE BASE RATE</span><span style="color:var(--amber);">EXHIBIT A</span></div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr);">
+          <div style="padding:24px 18px; border-right:1px solid var(--div);">
+            <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:42px; line-height:0.9; color:var(--red);">3 in 4</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; line-height:1.55; color:var(--mut); margin-top:10px;">venture-backed companies never return cash to investors</div>
+          </div>
+          <div style="padding:24px 18px; border-right:1px solid var(--div);">
+            <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:42px; line-height:0.9; color:var(--red);">30–40%</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; line-height:1.55; color:var(--mut); margin-top:10px;">liquidate to a total loss (zero)</div>
+          </div>
+          <div style="padding:24px 18px;">
+            <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:42px; line-height:0.9; color:var(--ink);">$368B</div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; line-height:1.55; color:var(--mut); margin-top:10px;">global VC deployed in 2024 into this machine</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin:0 0 24px;">The human invoice comes due too. In the most-cited survey of founder mental health, seventy-two percent reported a personal or family history of mental-health conditions, against forty-eight percent of a matched comparison group.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn6" id="ref6" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">6</a></sup> We built a machine that runs on optimism and pays out in breakdowns.</p>
+
+      <p style="margin:0 0 24px;">Some of that carnage is the cost of the lottery ticket. But a fat slice of it is self-inflicted, and it traces to a piece of folklore so sacred nobody bothers to check it.</p>
+
+      <!-- Section 2 -->
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">02</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">The Gospel of “Trust”</h2>
+      </div>
+
+      <p style="margin:0 0 24px;">Watch the founders. Eyes bright with terror and a little messianic shine, clutching lukewarm conference wine, rehearsing the elevator pitch like it’s the Gettysburg Address. At 3 a.m. they’re testing the exact shade of blue that whispers “dependable,” convinced that if they radiate enough trustworthiness the world will line up at the door.</p>
+
+      <p style="margin:0 0 24px;">Where did they learn this? From the people who profit by teaching it. “Trust is the bedrock,” the gurus intone, the consultants nod, the agencies bill, and the line gets repeated until it stops being a claim and becomes weather. Notice who never has to defend it. For the long game they’re right; durable companies run on earned trust. But for the first twitchy users who actually click sign-up on an unproven product, this obsession is one of the most expensive myths in the playbook. It tells you to manufacture the wrong thing at the one moment you can least afford the wasted motion.</p>
+
+      <!-- Section 3 -->
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">03</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">These Are Not Your Mother Buying Kale</h2>
+      </div>
+
+      <p style="margin:0 0 24px;">Start with who shows up first, because the research is unusually clear about them. Everett Rogers spent a career mapping how new things spread, and the people at the front of his curve, the innovators, are not careful. They are venturesome, comfortable with risk, tuned to information channels outside the mainstream, willing to eat bugs and breakage for the privilege of being early. Right behind them come the early adopters, the opinion leaders, who chase strategic advantage and, tellingly, identity.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn7" id="ref7" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">7</a></sup></p>
+
+      <p style="margin:0 0 24px;">These people are wired differently, and not as a figure of speech. A line of consumer research going back to Elizabeth Hirschman’s 1980 work treats novelty-seeking as a measurable trait: some humans are simply built to hunt the new and will rearrange their whole media diet to find it first.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn8" id="ref8" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">8</a></sup> Be careful here, though, because the same literature throws a punch at the lazy version of the idea. When researchers actually test “innate innovativeness” as a global personality type, it predicts what people buy surprisingly weakly, weaker than boring old age and income, and tends to work only indirectly, through word of mouth.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn9" id="ref9" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">9</a></sup> The useful unit isn’t a vibe called “innovator.” It’s domain-specific: the person who is venturesome about exactly your problem.</p>
+
+      <p style="margin:0 0 24px;">They sniff out novelty like a truffle pig in a French forest. They are not your mom vetting a new brand of organic kale. And selling them safety is selling them the one thing they didn’t come for.</p>
+
+      <!-- Section 4 -->
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">04</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">What Actually Fuels the First Click</h2>
+      </div>
+
+      <p style="margin:0 0 24px;">If not the warm blanket of conventional trust, then what? A more volatile cocktail.</p>
+
+      <p style="margin:0 0 24px;">There’s a shot of hope, that this odd new thing finally fixes the specific problem that makes them feel like a misunderstood alien. There’s a slug of desperation, because they already tried the mainstream answers and found them thin. And there’s a heavy pour of identity.</p>
+
+      <!-- pull quote -->
+      <blockquote style="margin:40px 0; padding:6px 0 6px 26px; border-left:4px solid var(--red); font-family:'Newsreader',serif; font-style:italic; font-weight:500; font-size:clamp(26px,3.2vw,36px); line-height:1.22; color:var(--ink);">Clicking sign-up on an unknown product isn’t a purchase. It’s a costume. It says: I’m the kind of person who’s early.</blockquote>
+
+      <p style="margin:0 0 24px;">This isn’t armchair psychology, it’s one of the better-replicated findings in consumer behavior. Berger and Heath showed that people make divergent choices precisely in the domains they read as symbolic of who they are, and abandon a taste the moment the wrong crowd adopts it.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn10" id="ref10" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">10</a></sup> Bellezza and her colleagues pushed further, showing that visible nonconformity, the red sneakers in a room full of suits, gets read by observers as status and competence.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn11" id="ref11" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">11</a></sup> Your earliest users aren’t tolerating your weirdness. They’re wearing it.</p>
+
+      <!-- Section 5 -->
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">05</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">Polishing Pixels While the Value Proposition Burns</h2>
+      </div>
+
+      <p style="margin:0 0 24px;">Here is where the myth turns expensive. The founder who believes trust comes first pours weeks into trust theater: the lacquered About page, the logo soup of “as seen in,” the testimonials from customers who don’t exist yet. It’s effort spent soothing an anxiety the early adopter doesn’t have, while the one thing that would actually move them, a raw demo proving you understand their problem, sits unbuilt. Houston’s video worked because it skipped all of it. It didn’t ask to be trusted. It showed the magic trick.</p>
+
+      <!-- mid-article subscribe -->
+      <div style="margin:44px 0; background:#37332D; color:var(--paper); padding:30px 30px; position:relative; overflow:hidden;">
+        <div aria-hidden="true" style="position:absolute; left:0; top:0; width:110px; height:3px; background:var(--red);"></div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.22em; color:var(--amberbright); margin-bottom:12px;">VICE &amp; VARIANCE · THE DISPATCH</div>
+        <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(24px,3vw,32px); line-height:1.0; text-transform:uppercase; color:var(--paper); max-width:24ch;">The part nobody says out loud.</div>
+        <iframe name="mc-iframe-art" title="hidden" style="position:absolute; width:0; height:0; border:0; opacity:0; pointer-events:none;"></iframe>
+        <form ref="{{ formRef }}" action="https://atmangroup.us10.list-manage.com/subscribe/post?u=a05cd41febfcb5bc837698ddb&amp;id=71e0f79528&amp;f_id=002d9ee4f0" method="post" target="mc-iframe-art" onSubmit="{{ subscribe }}" style="display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;">
+          <input ref="{{ emailRef }}" type="email" name="EMAIL" required placeholder="you@company.com" style="flex:1; min-width:220px; background:transparent; border:1px solid #4a463d; color:var(--paper); font-family:'JetBrains Mono',monospace; font-size:13px; padding:13px 15px; outline:none;" />
+          <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_a05cd41febfcb5bc837698ddb_71e0f79528" tabindex="-1" value="" /></div>
+          <button type="submit" style="background:var(--red); color:var(--ink); border:none; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.16em; padding:13px 20px; cursor:pointer; white-space:nowrap;">SUBSCRIBE →</button>
+        </form>
+        <div style="margin-top:10px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.03em; color:#B4AB98;">Marketing insights, 0-3 a month. No spam.</div>
+        <div ref="{{ thanksRef }}" style="display:none; margin-top:18px; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--amberbright);">› SIGNAL ACQUIRED. You're on the list; whitelist viceandvariance.com so it lands.</div>
+      </div>
+
+      <!-- Section 6 -->
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">06</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">Trust the Possibility, Not the Polish</h2>
+      </div>
+
+      <p style="margin:0 0 24px;">Now the careful objection, because the strong version of “early users don’t need trust” is wrong, and a sharp reader should catch it. They do extend trust. It’s just a different animal. The research on how trust forms in brand-new relationships, where there is no shared history to draw on, is plain: trust can form fast, and when it does it runs on disposition, institutional cues, and quick reads of competence rather than on accumulated experience.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn12" id="ref12" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">12</a></sup> Organizational researchers call the high-speed version “swift trust,” the kind strangers extend each other to get a risky thing done now.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn13" id="ref13" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">13</a></sup></p>
+
+      <p style="margin:0 0 24px;">That is the currency your first users are actually spending. Not the deep, earned faith of a ten-year customer. A gambler’s hunch. A scientist’s hypothesis. The first tentative stroke on a blank canvas. They’re betting on the possibility, reading your competence and your obsession off a handful of fast cues, and the bet is provisional, paper-thin, revocable the instant a better island appears.</p>
+
+      <p style="margin:0 0 24px;">The mistake was never believing trust matters. It’s confusing the slow kind for the fast kind, and spending your scarcest early weeks building a fortress of credibility for an audience that wanted a rope bridge to somewhere new. Later, when you cross from these innovators to the pragmatic early majority, the equation flips. Then they want references, proof, social validation, the entire reassurance apparatus.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn7b" id="ref7b" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">7</a></sup> Build that too soon and you’ve poured a foundation under an empty lot.</p>
+
+      <!-- Section 7 -->
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">07</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">Selling Life Insurance to Evel Knievel</h2>
+      </div>
+
+      <p style="margin:0 0 24px;">That is why this counterfeit trust is counterfeit. It misreads the customer at the exact moment misreading is fatal. It projects a craving for safety onto people who showed up for the thrill of the unproven. The graveyard at the top of this piece, the one with four-billion-dollar headstones, is full of companies that did everything the gurus prescribed and died anyway. Plenty of them spent their first hundred days trying to sell life insurance to Evel Knievel, then wondered why he wouldn’t sit still for the medical exam.</p>
+
+      <!-- signoff -->
+      <div style="margin:44px 0 0; padding-top:28px; border-top:2px solid var(--ink); display:flex; align-items:center; gap:16px;">
+        <div style="width:48px; height:48px; border-radius:50%; background:var(--ink); color:var(--amberbright); display:flex; align-items:center; justify-content:center; font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:22px;">A</div>
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:var(--ink);">ATMA DEGEYNDT</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; line-height:1.5; color:var(--mut); margin-top:4px;">Growth alchemist. Author of <span style="color:var(--ink);">Zero to a Million</span>. He scales startups 0 → $1M and writes down what actually moved the needle.</div>
+        </div>
+      </div>
+
+      <!-- ===================== NOTES ===================== -->
+      <div id="notes" style="margin:52px 0 0; padding-top:24px; border-top:1px solid var(--div);">
+        <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:0.02em; color:var(--ink); margin-bottom:20px;">Notes</div>
+        <ol style="margin:0; padding:0; list-style:none; counter-reset:fn;">
+          <li id="fn1" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">1</span><span>Ari Levy, “Clubhouse Cuts Half Its Staff Two Years After Reaching a $4 Billion Valuation,” CNBC, April 27, 2023; valuation, lead investors, and invite-code resale figures corroborated in “Clubhouse Revenue and Usage Statistics,” Business of Apps (2026). <a href="#ref1" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn2" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">2</span><span>On the download peak-to-trough and the 2023 layoffs, see Levy, CNBC, April 27, 2023; monthly download figures from J. Clara Chan, “How Clubhouse Is Working to Become a ‘Real Company,’” The Hollywood Reporter, November 13, 2021. <a href="#ref2" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn3" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">3</span><span>Eric Ries, The Lean Startup (New York: Crown Business, 2011), which recounts the case; the demo was posted to Hacker News on April 5, 2007, as part of Houston’s Y Combinator application, with the waitlist rising from roughly 5,000 to 75,000. <a href="#ref3" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn4" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">4</span><span>KPMG Private Enterprise, Venture Pulse Q4 2024 (January 2025): global VC investment of $368.3 billion across 35,684 deals in 2024, of which the United States accounted for roughly $209 billion. <a href="#ref4" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn5" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">5</span><span>Shikhar Ghosh’s analysis of about 2,000 venture-backed companies that raised at least $1 million between 2004 and 2010, reported in Deborah Gage, “The Venture Capital Secret: 3 Out of 4 Start-Ups Fail,” Wall Street Journal, September 20, 2012; roughly 75% never returned investor capital and 30–40% liquidated with total loss. <a href="#ref5" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn6" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">6</span><span>Michael A. Freeman et al., “Are Entrepreneurs ‘Touched with Fire’?” (working paper, UCSF / UC Berkeley, 2015); a peer-reviewed expansion appeared in Small Business Economics (2019). The 72% figure combines entrepreneurs reporting a personal mental-health history (49%) with asymptomatic entrepreneurs reporting a family history (23%); it is not a measure of harm caused by founding. <a href="#ref6" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn7" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">7</span><span>Everett M. Rogers, Diffusion of Innovations, 5th ed. (New York: Free Press, 2003). <a href="#ref7" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn8" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">8</span><span>Elizabeth C. Hirschman, “Innovativeness, Novelty Seeking, and Consumer Creativity,” Journal of Consumer Research 7, no. 3 (1980): 283–295. <a href="#ref8" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn9" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">9</span><span>Subin Im, Barry L. Bayus, and Charlotte H. Mason, “An Empirical Study of Innate Consumer Innovativeness, Personal Characteristics, and New-Product Adoption Behavior,” Journal of the Academy of Marketing Science 31, no. 1 (2003): 61–73. <a href="#ref9" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn10" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">10</span><span>Jonah Berger and Chip Heath, “Where Consumers Diverge from Others: Identity Signaling and Product Domains,” Journal of Consumer Research 34, no. 2 (2007): 121–134. <a href="#ref10" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn11" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">11</span><span>Silvia Bellezza, Francesca Gino, and Anat Keinan, “The Red Sneakers Effect: Inferring Status and Competence from Signals of Nonconformity,” Journal of Consumer Research 41, no. 1 (2014): 35–54. <a href="#ref11" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn12" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">12</span><span>D. Harrison McKnight, Larry L. Cummings, and Norman L. Chervany, “Initial Trust Formation in New Organizational Relationships,” Academy of Management Review 23, no. 3 (1998): 473–490; and McKnight, Choudhury, and Kacmar, “Developing and Validating Trust Measures for E-Commerce,” Information Systems Research 13, no. 3 (2002): 334–359. <a href="#ref12" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn13" style="counter-increment:fn; display:grid; grid-template-columns:30px 1fr; gap:10px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">13</span><span>Debra Meyerson, Karl E. Weick, and Roderick M. Kramer, “Swift Trust and Temporary Groups,” in Trust in Organizations, ed. Roderick M. Kramer and Tom R. Tyler (Thousand Oaks, CA: Sage, 1996), 166–195. <a href="#ref13" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+        </ol>
+      </div>
+    </article>
+
+    <!-- ===================== NEXT / FOOTER ===================== -->
+    <section style="position:relative; z-index:2; max-width:760px; margin:0 auto; padding:clamp(48px,5vw,72px) clamp(40px,5vw,40px) 0;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:12px; margin-bottom:24px;">KEEP READING</div>
+      <a href="archive.html" style="text-decoration:none; display:grid; grid-template-columns:88px 1fr auto; gap:24px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--div);">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:var(--amber);">TEARDOWN</span>
+        <div>
+          <div style="font-family:'Newsreader',serif; font-weight:500; font-size:clamp(20px,2.4vw,28px); line-height:1.06; color:var(--ink);">Your CMO Didn’t Fail. You Built a Job That’s Impossible.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--mut); margin-top:8px;">The 1.8-year tenure isn’t the story. The dynamic underneath it is.</div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--mut); white-space:nowrap;">N&deg;02</span>
+      </a>
+    </section>
+
+    <footer style="position:relative; z-index:2; margin-top:clamp(56px,6vw,80px); padding:clamp(36px,5vw,52px) clamp(58px,6vw,92px) 44px; border-top:2px solid var(--ink);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px;">
+        <div>
+          <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:900; font-size:24px; letter-spacing:-0.015em; color:var(--ink);">VICE &amp; VARIANCE</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.2em; color:var(--red); margin-top:6px;">MARKETING UNDRESSED</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:var(--amber);">NEED THE PRACTICE, NOT THE PUBLICATION?</div>
+          <a href="https://atma.marketing" target="_blank" rel="noopener" style="text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink); border-bottom:1px solid var(--amber); padding-bottom:2px; display:inline-block; margin-top:8px;">→ atma.marketing</a>
+        </div>
+      </div>
+      <div style="margin-top:30px; padding-top:16px; border-top:1px solid var(--div); display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:var(--mut); flex-wrap:wrap; gap:10px;">
+        <span>© ATMA DEGEYNDT 2026 · VICEANDVARIANCE.COM</span>
+        <span style="color:var(--amber);">SIGNAL OVER NOISE</span>
+      </div>
+    </footer>
+
+    <!-- grain -->
+    <div style="position:absolute; inset:0; z-index:4; pointer-events:none; opacity:0.30; mix-blend-mode:multiply; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.barRef = React.createRef();
+    this.emailRef = React.createRef();
+    this.thanksRef = React.createRef();
+    this.formRef = React.createRef();
+  }
+  componentDidMount(){
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = (h.scrollHeight - h.clientHeight) || 1;
+      const pct = Math.min(100, Math.max(0, (h.scrollTop || window.scrollY) / max * 100));
+      if(this.barRef.current) this.barRef.current.style.width = pct + '%';
+    };
+    window.addEventListener('scroll', this.onScroll, {passive:true});
+    this.onScroll();
+  }
+  componentWillUnmount(){ window.removeEventListener('scroll', this.onScroll); }
+  subscribe(e){
+    // let the native POST go to Mailchimp via the hidden iframe (no navigation),
+    // then swap the form for the thank-you note.
+    const form = this.formRef.current;
+    if(form && form.style) form.style.display = 'none';
+    if(this.thanksRef.current) this.thanksRef.current.style.display = 'block';
+    // do NOT preventDefault — the form submits to the iframe target
+  }
+  renderVals(){
+    return {
+      barRef: this.barRef,
+      emailRef: this.emailRef,
+      thanksRef: this.thanksRef,
+      formRef: this.formRef,
+      subscribe: (e)=>this.subscribe(e),
+    };
+  }
+}
+</script>
+</body>
+</html>

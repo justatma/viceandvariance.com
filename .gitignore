@@ -1,0 +1,17 @@
+# server artifacts
+error_log
+.well-known/
+.htpasswd
+
+# archives, never commit
+*.zip
+*.tar
+*.tar.gz
+
+# secrets
+.env
+*.key
+*.pem
+
+# macOS
+.DS_Store
