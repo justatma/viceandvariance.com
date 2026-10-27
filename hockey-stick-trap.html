@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>The Hockey Stick Trap | Vice &amp; Variance</title>
+<meta name="description" content="Why startup founders misread growth, mistake activity for progress, and abandon strategies that might actually work.">
+<link rel="canonical" href="https://viceandvariance.com/hockey-stick-trap.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Atma Degeyndt">
+<meta name="theme-color" content="#EEE7D8">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Vice &amp; Variance">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://viceandvariance.com/hockey-stick-trap.html">
+<meta property="og:title" content="The Hockey Stick Trap">
+<meta property="og:description" content="Why startup founders misread growth, mistake activity for progress, and abandon strategies that might actually work.">
+<meta property="og:image" content="https://viceandvariance.com/assets/og-vv-share.png">
+<meta property="og:image:secure_url" content="https://viceandvariance.com/assets/og-vv-share.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vice and Variance, marketing undressed.">
+<meta property="article:author" content="Atma Degeyndt">
+<meta property="article:section" content="Growth">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Hockey Stick Trap">
+<meta name="twitter:description" content="Why startup founders misread growth, mistake activity for progress, and abandon strategies that might actually work.">
+<meta name="twitter:image" content="https://viceandvariance.com/assets/og-vv-share.png">
+<meta name="twitter:image:alt" content="Vice and Variance, marketing undressed.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://viceandvariance.com/hockey-stick-trap.html#article",
+      "headline": "The Hockey Stick Trap",
+      "description": "Why startup founders misread growth, mistake activity for progress, and abandon strategies that might actually work.",
+      "url": "https://viceandvariance.com/hockey-stick-trap.html",
+      "mainEntityOfPage": "https://viceandvariance.com/hockey-stick-trap.html",
+      "image": "https://viceandvariance.com/assets/og-vv-share.png",
+      "inLanguage": "en-US",
+      "articleSection": "Growth",
+      "author": { "@id": "https://viceandvariance.com/#atma" },
+      "publisher": { "@id": "https://viceandvariance.com/#atma" },
+      "isPartOf": { "@id": "https://viceandvariance.com/#blog" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://viceandvariance.com/#atma",
+      "name": "Atma Degeyndt",
+      "url": "https://viceandvariance.com/",
+      "sameAs": ["https://atma.marketing", "https://zerotoamillion.marketing"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://viceandvariance.com/" },
+        { "@type": "ListItem", "position": 2, "name": "The Archive", "item": "https://viceandvariance.com/archive.html" },
+        { "@type": "ListItem", "position": 3, "name": "The Hockey Stick Trap", "item": "https://viceandvariance.com/hockey-stick-trap.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,16..72,400;0,16..72,500;0,16..72,600;1,16..72,400;1,16..72,500&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%2316130F"/><circle cx="20" cy="16" r="8.5" fill="none" stroke="%23EEE7D8" stroke-width="2"/><polygon points="2,7 21,16 2,25" fill="%23C32A1E"/><rect x="6.5" y="5.5" width="5" height="5" fill="%23EEE7D8" transform="rotate(13 9 8)"/></svg>'>
+<style>
+  html,body{margin:0;padding:0;}
+  ::placeholder{color:#a89f8c;opacity:1;}
+  ::selection{background:#C32A1E;color:#EEE7D8;}
+  a{color:inherit;}
+  a:hover{color:#C32A1E;}
+</style>
+</helmet>
+
+<div style="--paper:#EEE7D8; --paper2:#DED5C0; --ink:#16130F; --amber:#855A0F; --amberbright:#EBA83A; --red:#C32A1E; --mut:#6B6252; --div:#CFC6B2; min-height:100vh; background:var(--paper2); font-family:'JetBrains Mono',monospace; color:var(--ink); -webkit-font-smoothing:antialiased;">
+
+  <div style="position:fixed; top:0; left:0; right:0; height:3px; background:rgba(0,0,0,0.06); z-index:50;">
+    <div ref="{{ barRef }}" style="height:100%; width:0%; background:var(--red);"></div>
+  </div>
+
+  <div style="position:relative; max-width:1180px; margin:0 auto; background:var(--paper); box-shadow:0 0 80px rgba(0,0,0,0.16);">
+
+    <div style="position:absolute; top:0; bottom:0; left:0; width:30px; z-index:3; background-image:radial-gradient(circle at 15px 16px, rgba(0,0,0,0.42) 0 2.2px, rgba(0,0,0,0.10) 2.2px 3.4px, transparent 3.6px); background-size:30px 34px;"></div>
+    <div style="position:absolute; top:0; bottom:0; right:0; width:30px; z-index:3; background-image:radial-gradient(circle at 15px 16px, rgba(0,0,0,0.42) 0 2.2px, rgba(0,0,0,0.10) 2.2px 3.4px, transparent 3.6px); background-size:30px 34px;"></div>
+
+    <header style="position:relative; z-index:2; padding:18px clamp(58px,6vw,92px) 0;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; color:var(--amber); padding-bottom:14px;">
+        <span>ARCHIVE PRINTOUT · VT-ATMA &nbsp;//&nbsp; VICEANDVARIANCE.COM</span>
+        <span>NEWSLETTER · DECLASSIFIED</span>
+      </div>
+      <div style="height:1px; background:var(--amber); opacity:0.45;"></div>
+      <nav style="display:flex; justify-content:space-between; align-items:center; padding:18px 0 18px;">
+        <a href="index.html" style="text-decoration:none; font-family:'Big Shoulders Display',sans-serif; font-weight:900; font-size:26px; line-height:0.82; letter-spacing:-0.015em; color:var(--ink); white-space:nowrap;">VICE &amp; VARIANCE</a>
+        <div style="display:flex; align-items:center; gap:24px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em;">
+          <a href="archive.html" style="text-decoration:none;">← ALL ARTICLES</a>
+          <a href="index.html#subscribe" style="text-decoration:none; background:var(--red); color:var(--ink); padding:9px 16px; letter-spacing:0.16em;">SUBSCRIBE</a>
+        </div>
+      </nav>
+      <div style="height:2px; background:var(--ink);"></div>
+    </header>
+
+    <div style="position:relative; z-index:2; max-width:760px; margin:0 auto; padding:clamp(44px,5vw,76px) clamp(40px,5vw,40px) 0;">
+      <div style="display:flex; align-items:center; gap:14px; font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.16em; margin-bottom:30px;">
+        <span style="border:1px solid var(--amber); color:var(--amber); padding:3px 9px;">MYTH</span>
+        <span style="color:var(--mut);">SCIENCE FILES</span>
+      </div>
+      <h1 style="margin:0; font-family:'Newsreader',serif; font-weight:500; font-size:clamp(38px,5.6vw,68px); line-height:1.02; letter-spacing:-0.015em; color:var(--ink); text-wrap:balance;">The Hockey Stick Trap</h1>
+      <p style="margin:28px 0 0; font-family:'Newsreader',serif; font-style:italic; font-weight:400; font-size:clamp(20px,2.2vw,26px); line-height:1.42; color:#3a342b; max-width:60ch;">Why startup founders misread growth, mistake activity for progress, and abandon strategies that might actually work.</p>
+      <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-top:34px; padding-top:20px; border-top:1px solid var(--div); font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; color:var(--mut);">
+        <span style="color:var(--ink);">BY ATMA DEGEYNDT</span>
+        <span>·</span>
+        <span>10 MIN READ</span>
+        <span style="margin-left:auto; color:var(--amber);">● 5 CITATIONS</span>
+      </div>
+    </div>
+
+    <figure style="position:relative; z-index:2; max-width:640px; margin:clamp(38px,4.5vw,58px) auto 0; padding:0 clamp(40px,5vw,40px);">
+      <div style="border:1px solid var(--ink); background:#E9DFC8; line-height:0;">
+        <img src="assets/hockey-stick-trap.jpg" alt="Abstract chart composition: a heavy curve rising from a teal sphere at the origin to a second sphere at upper right, over yellow and cream blocks." style="width:100%; height:auto; display:block;">
+      </div>
+    </figure>
+
+    <article style="position:relative; z-index:2; max-width:760px; margin:0 auto; padding:clamp(40px,5vw,56px) clamp(40px,5vw,40px) 0; font-family:'Newsreader',serif; font-size:20px; line-height:1.62; color:#1c1812;">
+
+      <p style="margin:0 0 24px;"><span style="float:left; font-family:'Big Shoulders Display',sans-serif; font-weight:900; font-size:84px; line-height:0.7; padding:8px 14px 0 0; color:var(--red);">I</span>magine two founders having the same miserable Tuesday morning. Both have been running their companies for nine months. Both started with ten customers. Both now have fifty-two. Their growth charts are identical.</p>
+      <p style="margin:0 0 24px;">One has acquired customers largely through recommendations. People return, pay again, and bring friends. The other has been buying customers with ads, replacing departures almost as quickly as new people arrive. Revenue is moving. So is the credit-card balance.</p>
+      <p style="margin:0 0 24px;">Put the customer counts on a slide and you cannot tell these businesses apart. Show the costs, retention, and reasons people joined, and you might discover that one has a business beginning to work while the other has an expensive way of producing a line that points upward.</p>
+      <p style="margin:0 0 24px;">That is the hockey stick trap. We have become so accustomed to judging startups by the shape of their growth that we forget what a chart cannot tell us.</p>
+
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">01</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">The seductive geometry of success</h2>
+      </div>
+      <p style="margin:0 0 24px;">A hockey stick is a wonderfully simple picture: a flat beginning, a steep rise, and a future that makes the present look embarrassingly small. It tells investors there will be a payoff for their patience. It tells founders that the awkward years are merely the first act.</p>
+      <p style="margin:0 0 24px;">And it is not invented out of thin air. Entrepreneur Bobby Martin examined 172 innovative startups that had reached at least $1 million in revenue by their seventh year. He reported hockey-stick-shaped revenue growth in 161 of them. His examples included Bronto Software, a marketing-technology company that recorded about $17,000 in its first year, $170,000 in its second, and $700,000 in its third. Martin reported a much larger business by the time it was sold in 2015.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn1" id="ref1" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">1</a></sup></p>
+      <p style="margin:0 0 24px;">You could look at Bronto in year one and see a disappointment. Look backward from the acquisition and you see the opening chapter of a success story. Same numbers. Entirely different story.</p>
+      <p style="margin:0 0 24px;">But there is a catch in Martin’s study that matters more than the appealing curve: he selected successful companies. That makes it useful for understanding how some winners grew. It does not tell us how many companies had equally flat beginnings and never recovered. You cannot estimate the odds of success from a sample that largely excludes the failures.</p>
+      <p style="margin:0 0 24px;">Waverly Deutsch, an entrepreneurship professor at the University of Chicago Booth School of Business, asked a related question using a different sample. Her team examined 1,007 companies from the Kauffman Firm Survey after excluding incomplete or unsuitable records. The overall sales pattern was far more linear than a classic hockey stick. Companies relying on face-to-face relationship selling tended to grow steadily, one account at a time. Online businesses were more likely to display the familiar rapid climb.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn2" id="ref2" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">2</a></sup></p>
+      <p style="margin:0 0 24px;">The lesson is not that Martin was wrong and Deutsch was right. Their studies examine different businesses. That difference is precisely what a founder must understand before treating any growth curve as a map.</p>
+
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">02</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">The arithmetic of an unimpressive beginning</h2>
+      </div>
+      <p style="margin:0 0 24px;">Start with ten customers. Grow by 20 percent a month. After three months, you have about seventeen. After six, about thirty. After nine, fifty-two. It feels like watching paint dry, except the rent is due every thirty days.</p>
+      <p style="margin:0 0 24px;">The percentage growth is constant. The number of additional customers gets larger because the base is larger. It is ordinary compounding: ten becomes twelve, twelve becomes a little over fourteen, and eventually the same percentage produces additions substantial enough to show up on a conventional chart.</p>
+      <p style="margin:0 0 24px;">That part of the original hockey-stick argument is correct, and worth teaching. Small absolute gains can coexist with a meaningful percentage rate. If you look only at the number of new customers, you may miss a real pattern.</p>
+      <p style="margin:0 0 24px;">A logarithmic chart makes constant percentage growth easier to recognize. On an ordinary vertical axis, compounding bends upward. On a logarithmic axis, steady percentage growth traces something close to a straight line. The chart is a useful diagnostic of the rate. It is not proof that the customers are profitable, that they will stay, or that the pattern can continue.</p>
+      <p style="margin:0 0 24px;">Twenty percent monthly growth in a sample of ten is also a fragile statistic. Lose a single account and your reported rate can swing dramatically. At that size, examine the people behind the percentages. What made them buy? What did they actually use? Did anyone come back without another sales pitch?</p>
+      <figure style="margin:38px 0;">
+        <div style="border:1px solid var(--ink); background:#E9DFC8;">
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 18px; border-bottom:1px solid var(--ink); font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.16em; color:var(--ink);"><span>SAME CURVE, OPPOSITE ECONOMICS</span><span style="color:var(--amber);">FIG. 1</span></div>
+          <div style="padding:22px 20px 14px;">
+            <svg viewBox="0 0 1000 440" style="width:100%; height:auto; display:block;" role="img" aria-label="Line chart of active customers over nine months, rising from 10 to 52. Two companies, one that retains customers through referrals and one that buys customers with ads, share this identical curve.">
+              <line x1="80" y1="370" x2="600" y2="370" stroke="#CFC6B2" stroke-width="1"/><text x="68" y="376" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">0</text><line x1="80" y1="315" x2="600" y2="315" stroke="#CFC6B2" stroke-width="1"/><text x="68" y="321" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">10</text><line x1="80" y1="260" x2="600" y2="260" stroke="#CFC6B2" stroke-width="1"/><text x="68" y="266" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">20</text><line x1="80" y1="205" x2="600" y2="205" stroke="#CFC6B2" stroke-width="1"/><text x="68" y="211" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">30</text><line x1="80" y1="150" x2="600" y2="150" stroke="#CFC6B2" stroke-width="1"/><text x="68" y="156" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">40</text><line x1="80" y1="95" x2="600" y2="95" stroke="#CFC6B2" stroke-width="1"/><text x="68" y="101" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">50</text><line x1="80" y1="40" x2="600" y2="40" stroke="#CFC6B2" stroke-width="1"/><text x="68" y="46" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">60</text>
+              <line x1="80" y1="370" x2="600" y2="370" stroke="#16130F" stroke-width="2"/>
+              <text x="80" y="400" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">0</text><text x="253.33333333333334" y="400" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">3</text><text x="426.6666666666667" y="400" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">6</text><text x="600" y="400" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="16" fill="#6B6252">9</text>
+              <text x="340" y="430" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" letter-spacing="1.5" fill="#6B6252">MONTH</text>
+              <text x="14" y="200" transform="rotate(-90 14 200)" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="15" letter-spacing="1.5" fill="#6B6252">ACTIVE CUSTOMERS</text>
+              <polyline points="80.0,315.0 137.8,304.0 195.6,293.0 253.3,276.5 311.1,254.5 368.9,232.5 426.7,205.0 484.4,172.0 542.2,133.5 600.0,84.0" fill="none" stroke="#16130F" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+              <circle cx="80.0" cy="315.0" r="5.5" fill="#16130F"/><circle cx="137.8" cy="304.0" r="5.5" fill="#16130F"/><circle cx="195.6" cy="293.0" r="5.5" fill="#16130F"/><circle cx="253.3" cy="276.5" r="5.5" fill="#16130F"/><circle cx="311.1" cy="254.5" r="5.5" fill="#16130F"/><circle cx="368.9" cy="232.5" r="5.5" fill="#16130F"/><circle cx="426.7" cy="205.0" r="5.5" fill="#16130F"/><circle cx="484.4" cy="172.0" r="5.5" fill="#16130F"/><circle cx="542.2" cy="133.5" r="5.5" fill="#16130F"/><circle cx="600.0" cy="84.0" r="5.5" fill="#16130F"/>
+              <text x="586" y="80" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" letter-spacing="1.2" fill="#C32A1E">SAME VISIBLE GROWTH</text>
+              <g font-family="'JetBrains Mono',monospace"><text x="660" y="90" font-size="15" font-weight="700" letter-spacing="2" fill="#16130F">COMPANY A</text></g>
+              <g font-family="'Newsreader',serif" font-size="23" fill="#16130F"><text x="660" y="126" font-weight="500">Customers stay</text><text x="660" y="160">Referrals arrive</text><text x="660" y="194">Costs under control</text></g>
+              <line x1="660" y1="232" x2="960" y2="232" stroke="#CFC6B2"/>
+              <text x="660" y="278" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" letter-spacing="2" fill="#C32A1E">COMPANY B</text>
+              <g font-family="'Newsreader',serif" font-size="23" fill="#16130F"><text x="660" y="314" font-weight="500">Customers churn</text><text x="660" y="348">Paid acquisition fills gaps</text></g>
+            </svg>
+          </div>
+        </div>
+        <figcaption style="margin-top:12px; font-family:'JetBrains Mono',monospace; font-size:10.5px; line-height:1.6; letter-spacing:0.04em; color:var(--mut);">Similar curves can conceal opposite economics. Both examples are illustrative.</figcaption>
+      </figure>
+
+      <div style="margin:44px 0; background:#37332D; color:var(--paper); padding:30px 30px; position:relative; overflow:hidden;">
+        <div aria-hidden="true" style="position:absolute; left:0; top:0; width:110px; height:3px; background:var(--red);"></div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.22em; color:var(--amberbright); margin-bottom:12px;">VICE &amp; VARIANCE · THE NEWSLETTER</div>
+        <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(24px,3vw,32px); line-height:1.0; text-transform:uppercase; color:var(--paper); max-width:24ch;">The part nobody says out loud.</div>
+        <iframe name="mc-iframe-tmyns" title="hidden" style="position:absolute; width:0; height:0; border:0; opacity:0; pointer-events:none;"></iframe>
+        <form ref="{{ formRef }}" action="https://atmangroup.us10.list-manage.com/subscribe/post?u=a05cd41febfcb5bc837698ddb&amp;id=71e0f79528&amp;f_id=002d9ee4f0" method="post" target="mc-iframe-tmyns" onSubmit="{{ subscribe }}" style="display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;">
+          <input type="email" name="EMAIL" required placeholder="you@company.com" style="flex:1; min-width:220px; background:transparent; border:1px solid #4a463d; color:var(--paper); font-family:'JetBrains Mono',monospace; font-size:13px; padding:13px 15px; outline:none;" />
+          <div aria-hidden="true" style="position:absolute; left:-5000px;"><input type="text" name="b_a05cd41febfcb5bc837698ddb_71e0f79528" tabindex="-1" value="" /></div>
+          <button type="submit" style="background:var(--red); color:var(--ink); border:none; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.16em; padding:13px 20px; cursor:pointer; white-space:nowrap;">SUBSCRIBE →</button>
+        </form>
+        <div style="margin-top:10px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.03em; color:#B4AB98;">Marketing insights, 0-3 a month. No spam.</div>
+        <div ref="{{ thanksRef }}" style="display:none; margin-top:18px; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--amberbright);">› SIGNAL ACQUIRED. You're on the list; whitelist viceandvariance.com so it lands.</div>
+      </div>
+
+<div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">03</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">What the logistic equation actually says</h2>
+      </div>
+      <p style="margin:0 0 24px;">The mathematics most often attached to the hockey stick is the logistic growth equation:</p>
+      <div style="margin:30px 0; padding:18px 22px; background:#E9DFC8; border:1px solid var(--ink); font-family:'JetBrains Mono',monospace; font-size:clamp(13px,2vw,17px); line-height:1.5; letter-spacing:0.02em; color:var(--ink); overflow-wrap:anywhere;">dS/dt = k · S · (1 − S/L)</div>
+      <p style="margin:0 0 24px;">Here, S is the size of the population being tracked, such as active customers. The parameter k is an intrinsic rate of growth. L is the upper limit that this simplified system approaches. The final term, (1 − S/L), slows growth as the population approaches that limit.</p>
+      <p style="margin:0 0 24px;">When S is tiny compared with L, the limiting term is nearly one. Growth resembles compounding. In the middle, the number of additional customers per period can rise rapidly. As S approaches L, that growth slows. The familiar S-shaped curve emerges.</p>
+      <p style="margin:0 0 24px;">There is an inflection point at S = L/2: the moment when the absolute growth rate reaches its maximum in this particular model, assuming its parameters remain fixed. That is a mathematical property. It is not a universal milestone for product-market fit, and it certainly does not mean that startups discover their market when they have captured half of it.</p>
+      <p style="margin:0 0 24px;">The equation also contains an assumption we should not hide. When S equals zero, the predicted growth rate is zero. A company with no customers cannot acquire its first customer through a mechanism driven only by existing customers. Yet startups routinely acquire their first buyers through outreach, advertising, distribution partners, and somebody making a call.</p>
+      <p style="margin:0 0 24px;">And k is not simply “virality.” It is a rate parameter within the model. A founder cannot safely treat an increase in advertising expenditure as though it automatically increases the same underlying feedback process. Paid acquisition and customer-generated growth may have completely different costs and limits.</p>
+      <p style="margin:0 0 24px;">The logistic equation is useful when its assumptions fit. It is not a general law governing how businesses behave.</p>
+
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">04</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">The marketing problem the equation leaves out</h2>
+      </div>
+      <p style="margin:0 0 24px;">In 1969, marketing researcher Frank Bass described the diffusion of new products using a model with two distinct forces. One reflects adoption that occurs independently of prior buyers, often described as innovation or outside influence. The other reflects adoption influenced by people who have already bought, often described as imitation.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn3" id="ref3" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">3</a></sup></p>
+      <p style="margin:0 0 24px;">This distinction is not academic decoration. An advertisement can bring in a first customer even when nobody has heard of your company. A happy customer recommending the product to three colleagues is a different mechanism. Both can generate sales, but only the second depends directly on an expanding base of previous adopters.</p>
+      <p style="margin:0 0 24px;">Bass was modeling the timing of initial adoption, not the complete operating life of a startup. His original model does not calculate the cost of acquiring a customer, how often a subscriber cancels, or whether cash runs out before adoption spreads. None of those omissions make it useless. They tell us what question it answers.</p>
+      <p style="margin:0 0 24px;">This is the distinction between a model and a story. A model states its assumptions. A startup story often edits them out.</p>
+
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">05</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">The ceiling is not the size of the universe</h2>
+      </div>
+      <p style="margin:0 0 24px;">The L in the logistic equation is a limit measured in the same units as S. If S counts active customers, L has to represent a ceiling on that customer population under the model’s conditions. It is not automatically the dollar value of every industry your pitch deck happens to mention.</p>
+      <p style="margin:0 0 24px;">Total Addressable Market, or TAM, is itself an estimate. Andreessen Horowitz illustrated the danger of building it from the top down with an absurdly tidy toothbrush calculation: start with the population of China, assume a yearly purchase, assume 40 percent market share, and announce a market worth hundreds of millions. Missing from the arithmetic is the problem of actually reaching those buyers and convincing them to change habits.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn4" id="ref4" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">4</a></sup></p>
+      <p style="margin:0 0 24px;">A useful estimate begins much closer to the customer. Who has the problem? How many of those people can your product actually serve? Through which channel can you reach them? What will they pay, and how much will it cost to acquire and support them? The serviceable and realistically obtainable portions are usually much smaller than the big number printed on the investor slide.</p>
+      <p style="margin:0 0 24px;">But a market ceiling is not carved in stone. Products find new uses. Prices change. Distribution opens new territory. A new category can create buyers who were not part of the original estimate. In the real world, both the limit and the rate can move.</p>
+      <p style="margin:0 0 24px;">That means an S-curve is best read as a conditional explanation of one period, not a destiny drawn at incorporation.</p>
+
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">06</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">Not every plateau means the market is full</h2>
+      </div>
+      <p style="margin:0 0 24px;">A founder sees new-customer growth slow and decides the market is saturated. Perhaps it is. Perhaps paid advertising has exhausted its cheapest audiences. Perhaps an aggressive competitor has entered. Perhaps customers are leaving faster. Or perhaps the sales team has started pursuing prospects with less reason to buy.</p>
+      <p style="margin:0 0 24px;">These situations can produce similar-looking curves and call for opposite decisions.</p>
+      <p style="margin:0 0 24px;">The arithmetic of an active customer base is less glamorous than the logistic equation but more useful at an operating meeting:</p>
+      <div style="margin:30px 0; padding:18px 22px; background:#E9DFC8; border:1px solid var(--ink); font-family:'JetBrains Mono',monospace; font-size:clamp(13px,2vw,17px); line-height:1.5; letter-spacing:0.02em; color:var(--ink); overflow-wrap:anywhere;">Change in active customers = new customers + reactivations − departures</div>
+      <p style="margin:0 0 24px;">Imagine ending the month with 52 active customers. You added twelve, but ten left. Your net gain is two. Another company added three and lost one. Its net gain is also two. The lines match while the underlying businesses are behaving very differently.</p>
+      <p style="margin:0 0 24px;">A plateau created by genuine saturation might warrant a new segment, geography, or product. A plateau created by churn demands an explanation of why people leave. A plateau created by expensive acquisition calls for channel analysis. Opening a new market to compensate for customers who hate the current product is not expansion. It is avoidance.</p>
+
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">07</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">How to tell whether the flat part is healthy</h2>
+      </div>
+      <p style="margin:0 0 24px;">Start by separating the story of acquisition from the story of retention. Plot customers by the month they first arrived and follow each group afterward. Do recent cohorts return more often than earlier ones? Are customers still paying when the initial discount or onboarding attention disappears? If the business is transactional, do repeat purchases or contribution per customer improve?</p>
+      <p style="margin:0 0 24px;">Then separate paid growth from customer-generated growth. If every additional sale demands another dollar of marketing spend, you may have a workable paid acquisition channel. You do not yet have evidence of self-propelling adoption. Referrals, direct traffic, expansion within existing accounts, and unpaid recommendations may signal a different process, but each needs to be measured rather than romanticized.</p>
+      <p style="margin:0 0 24px;">Next, look at unit economics. What does it cost to acquire an incremental customer? How much revenue is likely to remain after the direct costs of serving that customer? How long before the initial investment is recovered? These questions matter more than whether a line resembles a ski slope. Use actual cohort behavior to estimate customer value rather than assuming each new customer will stay forever.</p>
+      <p style="margin:0 0 24px;">Finally, make the rate visible without worshipping it. Review customer counts on both ordinary and logarithmic axes. A straight line on the latter can confirm a sustained percentage pattern over the period observed. It cannot tell you whether next quarter will look the same. And when the starting number is small, report the actual customer counts beside the percentages so nobody mistakes one extra subscription for the discovery of a new law of nature.</p>
+      <p style="margin:0 0 24px;">For enterprise businesses, the appropriate leading signals may be qualified opportunities, conversion between sales stages, contract expansions, and time to close. For a consumer subscription service, activation and retention can matter long before a fancy headline-growth number means much. The indicators should follow the mechanism by which this particular business makes money.</p>
+
+      <div style="display:flex; align-items:baseline; gap:14px; margin:48px 0 22px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; color:var(--amber); letter-spacing:0.08em;">08</span>
+        <h2 style="margin:0; font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:clamp(26px,3vw,34px); line-height:0.98; text-transform:uppercase; letter-spacing:0.005em; color:var(--ink);">The other trap: scaling a theory before testing it</h2>
+      </div>
+      <p style="margin:0 0 24px;">Founders have two familiar ways to lose. They can abandon a working process before the gains become visible. Or they can pour money into a process that only looks as though it is working.</p>
+      <p style="margin:0 0 24px;">The second danger is not hypothetical. In a large study using startup job postings as a signal of when firms began scaling, researchers Saerom Lee and J. Daniel Kim found that companies scaling within their first twelve months were more likely to fail. Their estimates associated early scaling with a 20 to 40 percent higher likelihood of failure, while providing no evidence of a corresponding increase in successful exits. This is an observed association, not proof that hiring early caused each failure. The researchers also found that experimentation, including A/B testing, weakened the negative relationship.<sup style="font-size:0.62em; vertical-align:super;"><a href="#fn5" id="ref5" style="color:var(--amber); text-decoration:none; font-family:'JetBrains Mono',monospace;">5</a></sup></p>
+      <p style="margin:0 0 24px;">The founder’s job is not to manufacture patience or urgency. It is to reduce uncertainty before making a commitment that is hard to reverse.</p>
+      <p style="margin:0 0 24px;">Before spending more, write down what you expect to happen and what would prove you wrong. If you believe referrals will begin to lower acquisition cost, track referred customers and the proportion of new business they represent. If you believe weak retention is caused by a difficult onboarding step, change that step for a defined group and compare what happens. If you believe the market is saturated, look for rising reach costs and genuinely exhausted demand before announcing that the whole category has run out of buyers.</p>
+      <p style="margin:0 0 24px;">Set the test, measure it, and change course when the evidence calls for it. Not because you are in month nine. Not because a famous founder once needed three years. And not because the shape of your chart makes a terrific slide.</p>
+      <p style="margin:0 0 24px;">The chart records what happened. It does not tell you whether the engine is sound.</p>
+
+      <div style="margin:44px 0 0; padding-top:28px; border-top:2px solid var(--ink); display:flex; align-items:center; gap:16px;">
+        <div style="width:48px; height:48px; border-radius:50%; background:var(--ink); color:var(--amberbright); display:flex; align-items:center; justify-content:center; font-family:'Big Shoulders Display',sans-serif; font-weight:800; font-size:22px;">A</div>
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:var(--ink);">ATMA DEGEYNDT</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; line-height:1.5; color:var(--mut); margin-top:4px;">Growth alchemist. Author of <span style="color:var(--ink);">Zero to a Million</span>. He scales startups 0 → $1M and writes down what actually moved the needle.</div>
+        </div>
+      </div>
+
+      <div id="notes" style="margin:52px 0 0; padding-top:24px; border-top:1px solid var(--div);">
+        <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:700; font-size:22px; text-transform:uppercase; letter-spacing:0.02em; color:var(--ink); margin-bottom:20px;">Notes</div>
+        <ol style="margin:0; padding:0; list-style:none; display:grid; gap:16px;">
+          <li id="fn1" style="display:grid; grid-template-columns:30px 1fr; gap:10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">1</span><span>Bobby Martin, “Revenue Growth Study,” The Hockey Stick Principles, 2016. <a href="https://hockeystickprinciples.com/wp-content/uploads/2016/11/HSP_Report11_9_16.pdf" target="_blank" rel="noopener" style="color:var(--amber); word-break:break-all;">https://hockeystickprinciples.com/wp-content/uploads/2016/11/HSP_Report11_9_16.pdf</a> <a href="#ref1" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn2" style="display:grid; grid-template-columns:30px 1fr; gap:10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">2</span><span>Waverly Deutsch, “The Elusive Hockey-Stick Sales Curve,” Chicago Booth Review, February 27, 2017. <a href="https://www.chicagobooth.edu/review/elusive-hockey-stick-sales-curve" target="_blank" rel="noopener" style="color:var(--amber); word-break:break-all;">https://www.chicagobooth.edu/review/elusive-hockey-stick-sales-curve</a> <a href="#ref2" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn3" style="display:grid; grid-template-columns:30px 1fr; gap:10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">3</span><span>Frank M. Bass, “A New Product Growth for Model Consumer Durables,” Management Science 15, no. 5, January 1969, 215–227. <a href="https://doi.org/10.1287/mnsc.15.5.215" target="_blank" rel="noopener" style="color:var(--amber); word-break:break-all;">https://doi.org/10.1287/mnsc.15.5.215</a> <a href="#ref3" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn4" style="display:grid; grid-template-columns:30px 1fr; gap:10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">4</span><span>Anu Hariharan, Frank Chen, and Jeff Jordan, “16 More Startup Metrics,” Andreessen Horowitz, September 23, 2015. <a href="https://a16z.com/16-more-startup-metrics/" target="_blank" rel="noopener" style="color:var(--amber); word-break:break-all;">https://a16z.com/16-more-startup-metrics/</a> <a href="#ref4" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+          <li id="fn5" style="display:grid; grid-template-columns:30px 1fr; gap:10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.6; color:#3c362c;"><span style="color:var(--amber); font-weight:700;">5</span><span>Saerom (Ronnie) Lee and J. Daniel Kim, “When Do Startups Scale? Large-Scale Evidence from Job Postings,” Strategic Management Journal 45, no. 9, March 7, 2024, 1633–1669. <a href="https://doi.org/10.1002/smj.3596" target="_blank" rel="noopener" style="color:var(--amber); word-break:break-all;">https://doi.org/10.1002/smj.3596</a> <a href="#ref5" style="color:var(--mut); text-decoration:none;">↩</a></span></li>
+        </ol>
+      </div>
+    </article>
+
+<section style="position:relative; z-index:2; max-width:760px; margin:0 auto; padding:clamp(48px,5vw,72px) clamp(40px,5vw,40px) 0;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.24em; color:var(--ink); border-bottom:1px solid var(--ink); padding-bottom:12px; margin-bottom:24px;">KEEP READING</div>
+      <a href="founders-delusion.html" style="text-decoration:none; display:grid; grid-template-columns:88px 1fr auto; gap:24px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--div);">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.12em; color:var(--amber);">SCIENCE FILES</span>
+        <div>
+          <div style="font-family:'Newsreader',serif; font-weight:500; font-size:clamp(20px,2.4vw,28px); line-height:1.06; color:var(--ink);">The Founder’s Delusion</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--mut); margin-top:8px;">A successful company is not a theory of success.</div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--mut); white-space:nowrap;"></span>
+      </a>
+    </section>
+
+    <footer style="position:relative; z-index:2; margin-top:clamp(56px,6vw,80px); padding:clamp(36px,5vw,52px) clamp(58px,6vw,92px) 44px; border-top:2px solid var(--ink);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:18px;">
+        <div>
+          <div style="font-family:'Big Shoulders Display',sans-serif; font-weight:900; font-size:24px; letter-spacing:-0.015em; color:var(--ink);">VICE &amp; VARIANCE</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.2em; color:var(--red); margin-top:6px;">MARKETING UNDRESSED</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:var(--amber);">NEED THE PRACTICE, NOT THE PUBLICATION?</div>
+          <a href="https://atma.marketing" target="_blank" rel="noopener" style="text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink); border-bottom:1px solid var(--amber); padding-bottom:2px; display:inline-block; margin-top:8px;">→ atma.marketing</a>
+        </div>
+      </div>
+      <div style="margin-top:30px; padding-top:16px; border-top:1px solid var(--div); display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:var(--mut); flex-wrap:wrap; gap:10px;">
+        <span>© ATMA DEGEYNDT 2026 · VICEANDVARIANCE.COM</span>
+        <span style="color:var(--amber);">SIGNAL OVER NOISE</span>
+      </div>
+    </footer>
+
+    <div style="position:absolute; inset:0; z-index:4; pointer-events:none; opacity:0.30; mix-blend-mode:multiply; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.barRef = React.createRef();
+    this.thanksRef = React.createRef();
+    this.formRef = React.createRef();
+  }
+  componentDidMount(){
+    this.onScroll = () => {
+      const h = document.documentElement;
+      const max = (h.scrollHeight - h.clientHeight) || 1;
+      const pct = Math.min(100, Math.max(0, (h.scrollTop || window.scrollY) / max * 100));
+      if(this.barRef.current) this.barRef.current.style.width = pct + '%';
+    };
+    window.addEventListener('scroll', this.onScroll, {passive:true});
+    this.onScroll();
+  }
+  componentWillUnmount(){ window.removeEventListener('scroll', this.onScroll); }
+  subscribe(){
+    const form = this.formRef.current;
+    if(form && form.style) form.style.display = 'none';
+    if(this.thanksRef.current) this.thanksRef.current.style.display = 'block';
+  }
+  renderVals(){
+    return {
+      barRef: this.barRef,
+      thanksRef: this.thanksRef,
+      formRef: this.formRef,
+      subscribe: ()=>this.subscribe(),
+    };
+  }
+}
+</script>
+</body>
+</html>
