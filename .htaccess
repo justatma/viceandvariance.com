@@ -1,0 +1,12 @@
+# Apache config for viceandvariance.com (GoDaddy cPanel)
+DirectoryIndex index.html
+
+# ---- Force HTTPS and the bare hostname (website_ops audit 2026-10-31) ----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Keep AutoSSL certificate validation reachable over http
+  RewriteRule ^\.well-known/acme-challenge/ - [L]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} !^viceandvariance\.com$ [NC]
+  RewriteRule ^ https://viceandvariance.com%{REQUEST_URI} [L,R=301]
+</IfModule>
