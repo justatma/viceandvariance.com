@@ -21,6 +21,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Refuse to ship a page that crawlers would read as blank. A design-tool bundle
+      # rebuilds itself with JavaScript; GPTBot, ClaudeBot and most link previewers
+      # never run it. Fix: website_ops/runbooks/after-a-design-export.md
+      - name: Crawlability gate
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          skip = {"node_modules", "documents", "Documentation", "build"}
+          bad = []
+          for p in sorted(pathlib.Path(".").rglob("*.html")):
+              if skip & set(p.parts) or any(part.startswith(".") for part in p.parts):
+                  continue
+              s = p.read_text(errors="ignore")
+              head = s[: s.find("<body")] if "<body" in s else s
+              if re.search(r'<meta[^>]*name="robots"[^>]*noindex', head):
+                  continue
+              if "__bundler/template" in s and 'id="__prerender"' not in s:
+                  bad.append(f"  {p}: design bundle with no readable copy inside")
+          if bad:
+              print("These pages would reach crawlers as blank pages:")
+              print("\n".join(bad))
+              print("Run the converter: website_ops/runbooks/after-a-design-export.md")
+              sys.exit(1)
+          print("Crawlability gate: every indexable page has readable HTML.")
+          PY
+
       - name: Deploy via FTPS
         id: deploy
         continue-on-error: true
