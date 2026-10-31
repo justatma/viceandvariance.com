@@ -15,3 +15,6 @@ error_log
 
 # macOS
 .DS_Store
+
+# Deploy-time build tooling
+build/node_modules/

@@ -1,0 +1,6 @@
+{
+  "name": "site-build",
+  "private": true,
+  "description": "Renders JavaScript-drawn pages for crawlers at deploy. See prerender.mjs.",
+  "dependencies": { "playwright-core": "1.48.2" }
+}

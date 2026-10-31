@@ -21,6 +21,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Pages that draw their text with JavaScript get a readable copy for crawlers (build/prerender.mjs).
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Render JavaScript-drawn pages
+        run: |
+          npm install --prefix build --no-audit --no-fund
+          node build/prerender.mjs archive.html:overlay
+
       # Refuse to ship a page that crawlers would read as blank. A design-tool bundle
       # rebuilds itself with JavaScript; GPTBot, ClaudeBot and most link previewers
       # never run it. Fix: website_ops/runbooks/after-a-design-export.md
@@ -70,6 +79,7 @@ jobs:
             documents/**
             config.sample.php
             netlify.toml
+            build/**
 
       - name: Deploy via FTPS (retry on transient failure)
         if: steps.deploy.outcome == 'failure'
@@ -93,3 +103,4 @@ jobs:
             documents/**
             config.sample.php
             netlify.toml
+            build/**
